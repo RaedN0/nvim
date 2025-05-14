@@ -5,15 +5,20 @@ return {
       opts.settings = {
         java = {
           format = {
-            enabled = true,
             settings = {
-              url = vim.fn.expand("~/.config/nvim/java-formatter.xml"),
-              profile = "Project",
+              ["org.eclipse.jdt.core.formatter.alignment_for_parameters_in_method_declaration"] = 80,
+              ["org.eclipse.jdt.core.formatter.alignment_for_throws_clause_in_method_declaration"] = 80,
+              ["org.eclipse.jdt.core.formatter.continuation_indentation"] = 1,
+              ["org.eclipse.jdt.core.formatter.insert_new_line_before_opening_brace_in_method_declaration"] = "insert",
+              ["org.eclipse.jdt.core.formatter.lineSplit"] = 100,
             },
           },
-          inlayHints = {
-            parameterNames = {
-              enabled = "all",
+          completion = {
+            importOrder = {
+              "#",
+              "java",
+              "javax",
+              "de",
             },
           },
         },
