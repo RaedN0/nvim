@@ -1,6 +1,9 @@
 return {
   "saghen/blink.cmp",
   version = "*",
+  dependencies = {
+    "Kaiser-Yang/blink-cmp-avante",
+  },
   opts = {
     keymap = { preset = "super-tab" },
 
@@ -10,7 +13,14 @@ return {
     },
 
     sources = {
-      default = { "lsp", "path", "snippets", "buffer" },
+      default = { "avante", "lsp", "path", "snippets", "buffer" },
+      providers = {
+        avante = {
+          module = "blink-cmp-avante",
+          name = "Avante",
+          opts = {},
+        },
+      },
     },
   },
   opts_extend = { "sources.default" },
