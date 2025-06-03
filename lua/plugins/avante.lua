@@ -4,8 +4,13 @@ return {
   version = false,
   opts = {
     provider = "gemini",
-    gemini = {
-      model = "gemini-2.5-pro-preview-05-06",
+    providers = {
+      gemini = {
+        model = "gemini-2.5-pro-preview-05-06",
+        extra_request_body = {
+          max_tokens = 64000,
+        },
+      },
     },
   },
   build = "make",
